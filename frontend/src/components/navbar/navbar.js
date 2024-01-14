@@ -40,7 +40,7 @@ function Header() {
     check();
   })
   return (
-    <HStack w={'full'} h={['10vh', '12vh']} pl={['3', '10']} bgColor={'blue.200'} alignItems={'center'} borderBottom={'1px solid blue'} position={'fixed'} zIndex={1000}>
+    <HStack w={'100vw'} h={['10vh', '12vh']} pl={['3', '10']} bgColor={'blue.200'} alignItems={'center'} borderBottom={'1px solid blue'} position={'fixed'} zIndex={1000}>
       {/* <Image src={img1} alt={'loading'} w={['10', '20']} h={['7', '20']} ></Image> */}
       <Heading fontSize={['3xl', '6xl']} color={'blue.500'} fontFamily={'sans-serif'}>Quiz-Time</Heading>
       {login && <Button colorScheme='blue' mt={'6'} fontSize={['1.5vmax', '1vmax']} onClick={profilehandler} margin={'1vmax'} style={{ marginLeft: 'auto' }}>Profile</Button>}
