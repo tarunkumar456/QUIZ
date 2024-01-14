@@ -28,7 +28,9 @@ function Header() {
         await axios.get(
           `/api/v1/islogin`,
           { withCredentials: true }
+
         );
+        setLogin(true)
       } catch (error) {
         // Navigate('/login')
         // console.log(error)
@@ -41,8 +43,8 @@ function Header() {
     <HStack w={'full'} h={['10vh', '12vh']} pl={['3', '10']} bgColor={'blue.200'} alignItems={'center'} borderBottom={'1px solid blue'} position={'fixed'} zIndex={1000}>
       {/* <Image src={img1} alt={'loading'} w={['10', '20']} h={['7', '20']} ></Image> */}
       <Heading fontSize={['3xl', '6xl']} color={'blue.500'} fontFamily={'sans-serif'}>Quiz-Time</Heading>
-      <Button colorScheme='blue' mt={'6'} fontSize={['1.5vmax', '1vmax']} onClick={profilehandler} margin={'1vmax'} style={{ marginLeft: 'auto' }}>Profile</Button>
-      <Button colorScheme='blue' mt={'6'} fontSize={['1.5vmax', '1vmax']} onClick={logouthandler} margin={'1vmax'} >Logout</Button>
+      {login && <Button colorScheme='blue' mt={'6'} fontSize={['1.5vmax', '1vmax']} onClick={profilehandler} margin={'1vmax'} style={{ marginLeft: 'auto' }}>Profile</Button>}
+      {login && <Button colorScheme='blue' mt={'6'} fontSize={['1.5vmax', '1vmax']} onClick={logouthandler} margin={'1vmax'} >Logout</Button>}
     </HStack>
   )
 }
