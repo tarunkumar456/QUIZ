@@ -5,7 +5,7 @@ const app = express();
 app.use(
   cors({
     "credentials":true,
-    "origin":"https://quiz-frontend-6nnkdqvt4-taruns-projects-20770b04.vercel.app",
+    "origin":"https://quiz-frontend-eta.vercel.app",
     "methods": "GET,HEAD,PUT,PATCH,POST,DELETE",
     "optionsSuccessStatus": 204
   })
