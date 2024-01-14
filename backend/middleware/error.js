@@ -24,6 +24,7 @@ module.exports = (err, req, resp, next) => {
         const message = `Json web token is expired, try again`
         err = new ErrorHandler(message, 400);
     }
+    console.log(err)
 
     resp.status(err.statuscode).json({
         success: false,
