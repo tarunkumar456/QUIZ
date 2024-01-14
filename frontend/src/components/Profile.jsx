@@ -58,7 +58,6 @@ function Profile() {
             try {
                 const { data } = await axios.get(
                     `https://quiz-backend-one-fawn.vercel.app/api/v1/getdata`,
-                    {},
                     { withCredentials: true }
                 );
                 setquizResults(data.quiz.quiz);
