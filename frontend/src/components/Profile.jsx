@@ -112,8 +112,9 @@ function Profile() {
 
     return (
         <Box minH={['150vh', '120vh']}
-            width={['140vw', 'full']}
-            bgColor={'#bad7f0'}
+            width={['100vw', 'full']}
+            bgColor={'#bad7f0'},
+            overflowX={'scroll'}
             
             >
             
@@ -137,59 +138,59 @@ function Profile() {
                                 ml={[0, 0, '6vw']}
                             >
                                 <VStack alignItems={'flex-start'} ml={2} spacing={4}>
-                                    <Heading mb={4}>Profile</Heading>
+                                    <Heading mb={[1,4]}>Profile</Heading>
                                     <HStack alignItems={'flex-end'}>
-                                        <Text fontSize="xl" fontWeight="bold">
+                                        <Text fontSize={["md","xl"]} fontWeight="bold">
                                             Name:
                                         </Text>
-                                        <Text fontSize={'medium'} fontWeight="bold" pb={'1px'}>
+                                        <Text fontSize={["sm","md"]} fontWeight={'semibold'} pb={'1px'}>
                                             {userData.name}
                                         </Text>
                                     </HStack>
                                     <HStack alignItems={'flex-end'}>
-                                        <Text fontSize="xl" fontWeight="bold">
+                                        <Text fontSize={["md","xl"]} fontWeight="bold">
                                             Accuracy:
                                         </Text>
-                                        <Text fontSize={'medium'} fontWeight="bold" pb={'1px'}>
+                                        <Text fontSize={["sm","md"]} fontWeight={'semibold'} pb={'1px'}>
                                             {userData.accuracy.toFixed(2)}%
                                         </Text>
                                     </HStack>
                                     <HStack alignItems={'flex-end'}>
-                                        <Text fontSize="xl" fontWeight="bold">
+                                        <Text fontSize={["md","xl"]} fontWeight="bold">
                                             Total Marks:
                                         </Text>
-                                        <Text fontSize={'medium'} fontWeight="bold" pb={'1px'}>
+                                        <Text fontSize={["sm","md"]} fontWeight={'semibold'} pb={'1px'}>
                                             {userData.totalMarks}
                                         </Text>
                                     </HStack>
                                     <HStack alignItems={'flex-end'}>
-                                        <Text fontSize="xl" fontWeight="bold">
+                                        <Text fontSize={["md","xl"]} fontWeight="bold">
                                             Email:
                                         </Text>
-                                        <Text fontSize={'medium'} fontWeight="bold" pb={'2px'}>
+                                        <Text fontSize={["sm","md"]} fontWeight={'semibold'} pb={'2px'}>
                                             {userData.email}
                                         </Text>
                                     </HStack>
                                     <HStack alignItems={'flex-end'}>
-                                        <Text fontSize="xl" fontWeight="bold">
+                                        <Text fontSize={["md","xl"]} fontWeight="bold">
                                             Average Time:
                                         </Text>
-                                        <Text fontSize={'medium'} fontWeight="bold" pb={'1px'}>
+                                        <Text fontSize={["sm","md"]} fontWeight={'semibold'} pb={'1px'}>
                                             {userData.averageTime.toFixed(2)}
                                         </Text>
                                     </HStack>
                                     <HStack alignItems={'flex-end'}>
-                                        <Text fontSize="xl" fontWeight="bold">
+                                        <Text fontSize={["md","xl"]} fontWeight="bold">
                                             Total quiz attempted:
                                         </Text>
-                                        <Text fontSize={'medium'} fontWeight="bold" pb={'2px'}>
+                                        <Text fontSize={["sm","md"]} fontWeight={'semibold'} pb={'2px'}>
                                             {userData.attempted}
                                         </Text>
                                     </HStack>
                                 </VStack>
                             </Box>
                             <Box width={['100vw', '100vw', '70%']} ml={[0, 0, '5%', '30%']} mt={['10vh', '15vh']}>
-                                <Table variant="simple" overflowX="auto">
+                                <Table variant="simple" >
                                     <TableCaption placement="top" fontSize={['4vh', '5vh']}>
                                         Quiz Report
                                     </TableCaption>
@@ -217,7 +218,7 @@ function Profile() {
                             </Box>
                         </Box>
                     </div>
-                    <HStack position={['relative', 'fixed']} bottom={'9vh'} left={'5vw'}>
+                    <HStack position={['relative', 'fixed']} bottom={'9vh'} left={'5vw'} mt={['4vh','0vh']}>
                         <Button
                             className="next_btn"
                             height="40px"
