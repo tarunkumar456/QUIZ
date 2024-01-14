@@ -26,7 +26,7 @@ function Home() {
     const check = async () => {
       try {
         await axios.get(
-          `/api/v1/islogin`,
+          `https://quiz-backend-one-fawn.vercel.app/api/v1/islogin`,
           { withCredentials: true }
         );
 

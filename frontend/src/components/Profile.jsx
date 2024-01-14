@@ -48,7 +48,7 @@ function Profile() {
         const fun = async () => {
             const check = async () => {
                 try {
-                    await axios.get(`/api/v1/islogin`, { withCredentials: true });
+                    await axios.get(`https://quiz-backend-one-fawn.vercel.app/api/v1/islogin`, { withCredentials: true });
                 } catch (error) {
                     alert.error(error.response.data.message);
                     Navigate('/login');
@@ -57,7 +57,7 @@ function Profile() {
             check();
             try {
                 const { data } = await axios.get(
-                    `/api/v1/getdata`,
+                    `https://quiz-backend-one-fawn.vercel.app/api/v1/getdata`,
                     {},
                     { withCredentials: true }
                 );

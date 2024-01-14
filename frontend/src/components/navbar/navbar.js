@@ -11,7 +11,7 @@ function Header() {
   const logouthandler = async () => {
     try {
       await axios.post(
-        `/api/v1/logout`, {}, { withCredentials: true }
+        `https://quiz-backend-one-fawn.vercel.app/api/v1/logout`, {}, { withCredentials: true }
       );
       Navigate('/login')
       setLogin(false)
@@ -26,7 +26,7 @@ function Header() {
     const check = async () => {
       try {
         await axios.get(
-          `/api/v1/islogin`,
+          `https://quiz-backend-one-fawn.vercel.app/api/v1/islogin`,
           { withCredentials: true }
 
         );

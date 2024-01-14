@@ -37,7 +37,7 @@ const Login = () => {
 
             try {
                 await axios.post(
-                    `/api/v1/login`,
+                    `https://quiz-backend-one-fawn.vercel.app/api/v1/login`,
                     {
                         "email": loginEmail,
                         "password": loginPassword
@@ -67,7 +67,7 @@ const Login = () => {
 
                 try {
                     await axios.post(
-                        `/api/v1/register`,
+                        `https://quiz-backend-one-fawn.vercel.app/api/v1/register`,
                         {
                             "name": name,
                             "email": loginEmail,

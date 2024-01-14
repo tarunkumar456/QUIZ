@@ -58,7 +58,7 @@ function Quiz() {
         const check = async () => {
             try {
                 await axios.get(
-                    `/api/v1/islogin`,
+                    `https://quiz-backend-one-fawn.vercel.app/api/v1/islogin`,
                     { withCredentials: true }
                 );
 
@@ -120,7 +120,7 @@ function Quiz() {
             if (totalattempt)
                 acc = ((totalcorrect * 100) / totalattempt);
             const { data } = await axios.put(
-                `/api/v1/adddata`,
+                `https://quiz-backend-one-fawn.vercel.app/api/v1/adddata`,
                 {
                     "marks": marks,
                     "correct": totalcorrect,
