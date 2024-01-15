@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { useAlert } from 'react-alert';
 import Loader from './Loader/Loader';
+import {decode, encode} from 'html-entities';
 import { useParams } from 'react-router-dom';
 import img from '../assets/back7.jpg'
 
@@ -92,11 +93,11 @@ function Quiz() {
                     insert();
                     const quesdata = {
 
-                        "q": list.question,
-                        "a": questions[0],
-                        "b": questions[1],
-                        "c": questions[2],
-                        "d": questions[3],
+                        "q": decode(list.question),
+                        "a": decode(questions[0]),
+                        "b": decode(questions[1]),
+                        "c": decode(questions[2]),
+                        "d": decode(questions[3]),
                         "correct": ans
                     }
                     arr.push(quesdata)
