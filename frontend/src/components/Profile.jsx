@@ -120,6 +120,7 @@ function Profile() {
             bgColor={'#bad7f0'}
             overflowX={'scroll'}
             bgImg={`url(${img})`} bgSize="cover" inset={'0'}  
+            color={'white'}
             >
             
             {loading ? (
@@ -203,7 +204,7 @@ function Profile() {
                             </Box>
                             <Box width={['100vw', '100vw', '70%']} ml={[0, 0, '5%', '30%']} mt={['10vh', '15vh']}>
                                 <Table variant="simple" overflowX="auto">
-                                    <TableCaption placement="top" fontSize={['4vh', '5vh']}>
+                                    <TableCaption placement="top" fontSize={['4vh', '5vh']} color={'white'}>
                                         Quiz Report
                                     </TableCaption>
                                     <Thead>

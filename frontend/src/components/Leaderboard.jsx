@@ -90,8 +90,8 @@ function Leaderboard() {
             ) : (
                 <Box display={'flex'} justifyContent={'center'} width={'full'} pt={'10vh'} bgColor={'blue.100'} minH={'100vh'} bgImg={`url(${img})`} bgSize="cover" inset={'0'}>
                     <Box overflowX={'scroll'}>
-                        <Table variant="simple" size={['sm', 'lg']}>
-                            <TableCaption placement="top" fontSize={['5vh', '7vh']} fontWeight={'bold'}>
+                        <Table variant="simple" size={['sm', 'lg']} color={'white'}>
+                            <TableCaption placement="top" fontSize={['5vh', '7vh']} fontWeight={'bold'} color={'white'}>
                                 LEADERBOARD
                             </TableCaption>
                             <Thead  >
