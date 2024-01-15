@@ -19,6 +19,9 @@ function Header() {
       alert.error(error.response.data.message)
     }
   }
+  const boardhandler = () => {
+    Navigate('/leaderboard')
+  }
   const profilehandler = () => {
     Navigate('/profile')
   }
