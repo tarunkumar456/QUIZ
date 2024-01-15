@@ -84,10 +84,12 @@ function Profile() {
                     averagetime += i.averagetime;
                     attempted++;
                 });
+                let rating=0;
 
                 if (attempted) {
                     totalaccuracy /= attempted;
                     averagetime /= attempted;
+                    rating=(totalmarks)/(attempted*averagetime);
                 }
                 setuserdata({
                     name: data.quiz.name,
@@ -96,6 +98,7 @@ function Profile() {
                     email: data.quiz.email,
                     averageTime: averagetime,
                     attempted: attempted,
+                    rating:rating
                 });
                 setloading(false);
             } catch (error) {
@@ -144,6 +147,14 @@ function Profile() {
                                         </Text>
                                         <Text fontSize={["sm","md"]} fontWeight={'semibold'} pb={'1px'}>
                                             {userData.name}
+                                        </Text>
+                                    </HStack>
+                                    <HStack alignItems={'flex-end'}>
+                                        <Text fontSize={["md","xl"]} fontWeight="bold">
+                                            Rating:
+                                        </Text>
+                                        <Text fontSize={'medium'} fontWeight="bold" pb={'1px'}>
+                                            {userData.rating.toFixed(2)}
                                         </Text>
                                     </HStack>
                                     <HStack alignItems={'flex-end'}>
