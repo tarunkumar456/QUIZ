@@ -185,10 +185,7 @@ function Quiz() {
                     <Box w='550px' bg='aliceblue' borderRadius='5px' h={'440px'} mt={'15vh'}>
                         <Box as='header' pos='relative' zIndex='2' h='70px' p='0 30px' bg={'blue.300'} borderRadius='5px 5px 0 0' display='flex' alignItems='center' justifyContent='center' boxShadow='0px 3px 5px 1px rgba(0,0,0,0.1)'>
                             <Text fontSize='20px' fontWeight='600' className='title' textColor={'white'}>Report Analysis</Text>
-                            {/* <Box className='timer' color='#004085' bg='#cce5ff' border='1px solid #b8daff' h='45px' p='0 8px' borderRadius='5px' display='flex' alignItems='center' justifyContent='space-between' w='145px'>
-                            <Text fontSize='17px' fontWeight='400' userSelect='none'>Time Left :</Text>
-                            <Text fontSize='18px' fontWeight='500' h='30px' w='45px' color='#fff' borderRadius='5px' lineHeight='30px' textAlign='center' bg='#343a40' border='1px solid #343a40' userSelect='none' className='timer_sec'>{time}</Text>
-                        </Box> */}
+                            
                             <Box pos='absolute' bottom='0px' left='0px' h='3px' bg='#007bff' className='time_line'></Box>
                         </Box>
                         <Box display={'flex'} flexDirection={'column'} alignItems={'flex-start'} justifyContent={'space-evenly'} h={'72%'} ml={'10%'}>
@@ -199,7 +196,7 @@ function Quiz() {
                             <Box display={'flex'} width={'80%'} justifyContent={'space-between'}> <Text>Average Time </Text><Text> {(totaltime / 10).toFixed(2)} s</Text></Box>
 
                         </Box>
-                        <Box as='footer' h='60px' display='flex' bg={'blue.300'} alignItems='center' justifyContent='space-between' borderTop='1px solid lightgrey'>
+                        <Box as='footer' h='60px' display='flex' alignItems='center' justifyContent='space-between' borderTop='1px solid lightgrey'>
                             <Box className='total_que' display='flex' alignItems='center' justifyContent='center' w='100%' >
                                 <Button className='next_btn' textColor={'white'} height='40px' fontSize='18px' fontWeight='400' cursor='pointer' borderRadius='5px' bg='#007bff' border='1px solid white' lineHeight='10px' _hover={{ bg: '#0263ca', cursor: "pointer" }} onClick={gotohome}> Home</Button>
                             </Box>
