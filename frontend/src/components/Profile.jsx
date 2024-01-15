@@ -232,6 +232,7 @@ function Profile() {
                             lineHeight="10px"
                             _hover={{ bg: '#0263ca', cursor: 'pointer' }}
                             onClick={gotohome}
+                            color={'white'}
                         >
                             Home
                         </Button>
@@ -249,6 +250,7 @@ function Profile() {
                             lineHeight="10px"
                             _hover={{ bg: '#0263ca', cursor: 'pointer' }}
                             onClick={generatepdf}
+                            color={'white'}
                         >
                             Download report
                         </Button>

@@ -43,8 +43,9 @@ function Header() {
     <HStack w={'100vw'} h={['10vh', '12vh']} pl={['3', '10']} bgColor={'blue.200'} alignItems={'center'} borderBottom={'1px solid blue'} position={'fixed'} zIndex={1000}>
       <Image src={img1} alt={'loading'} w={['8', '16']} h={['8', '16']} ></Image>
       <Heading fontSize={['3xl', '6xl']} color={'blue.500'} fontFamily={'sans-serif'}>Quiz-Time</Heading>
-      {login && <Button colorScheme='blue' mt={'6'} fontSize={['1vmax', '1vmax']} onClick={profilehandler} margin={'0.5vmax'} style={{ marginLeft: 'auto' }}>Profile</Button>}
-      {login && <Button colorScheme='blue' mt={'6'} fontSize={['1vmax', '1vmax']} onClick={logouthandler} margin={'0.5vmax'} >Logout</Button>}
+      {login && <Button colorScheme='blue' mt={'6'} fontSize={['1vmax', '1vmax']} onClick={boardhandler} margin={'0.5vmax'} style={{ marginLeft: 'auto' }}>Leaderboard</Button>}
+      {login && <Button colorScheme='blue' mt={'6'} fontSize={['1vmax', '1vmax']} onClick={profilehandler} margin={'0.5vmax'} >Profile</Button>}
+      {login && <Button colorScheme='blue' mt={'6'} fontSize={['1vmax', '1vmax']} onClick={logouthandler} margin={'0.5vmax'} mr={'1.4vmax'}>Logout</Button>}
     </HStack>
   )
 }

@@ -13,6 +13,7 @@ import Notfound from './components/Notfound';
 import Navbar from './components/navbar/navbar';
 import Quiz from './components/Quiz';
 import Profile from './components/Profile';
+import Leaderboard from './components/Leaderboard';
 
 export const usercontext = createContext(null);
 function App() {
@@ -30,6 +31,7 @@ function App() {
             <Route path={'/profile'} element={<Profile/>}></Route>
             <Route path={'*'} element={<Notfound/>}></Route>
             <Route path={'/quiz/:id'} element={<Quiz/>}></Route>
+            <Route path={'/leaderboard'} element={<Leaderboard/>}></Route>
           </Routes>
         </usercontext.Provider>
 

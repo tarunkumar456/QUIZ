@@ -98,3 +98,14 @@ exports.isAuth = catchasyncerror(async (req, resp, next) => {
 
 })
 
+//get all data
+exports.data = catchasyncerror(async (req, resp, next) => {
+    let user = await userModels.find();
+    if (!user) return next(new ErrorHandler("User not found", 404))
+    let quiz = user
+
+    resp.status(200).json({
+        success: true,
+        quiz
+    });
+})
