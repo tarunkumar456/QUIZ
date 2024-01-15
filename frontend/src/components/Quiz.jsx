@@ -8,6 +8,7 @@ import axios from 'axios';
 import { useAlert } from 'react-alert';
 import Loader from './Loader/Loader';
 import { useParams } from 'react-router-dom';
+import img from '../assets/back7.jpg'
 
 // import { FaXmark } from "react-icons/fa6";
 function Quiz() {
@@ -179,7 +180,7 @@ function Quiz() {
         <>{(loading) ? (
             <Loader />
         ) : (
-            <Box className='home' h='100vh' bg='#bad7f0' display='flex'  justifyContent='center' alignItems='center'>
+            <Box className='home' h='100vh' bg='#bad7f0' display='flex'  justifyContent='center' alignItems='center' bgImg={`url(${img})`} bgSize="cover" inset={'0'}>
                 {(finsihed == 1) &&
                     <Box w='550px' bg='aliceblue' borderRadius='5px' h={'440px'} mt={'15vh'}>
                         <Box as='header' pos='relative' zIndex='2' h='70px' p='0 30px' bg={'blue.300'} borderRadius='5px 5px 0 0' display='flex' alignItems='center' justifyContent='center' boxShadow='0px 3px 5px 1px rgba(0,0,0,0.1)'>

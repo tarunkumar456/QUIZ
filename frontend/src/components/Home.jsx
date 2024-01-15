@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useAlert } from 'react-alert'
 import Loader from './Loader/Loader'
+import img from '../assets/back7.jpg'
 
 function Home() {
   const Navigate = useNavigate();
@@ -47,7 +48,7 @@ function Home() {
       {loading ? (
         <Loader />
       ) : (
-        <Box bgColor='#bad7f0' h='100vh' display='flex' justifyContent='center' alignItems='center'>
+        <Box bgColor='#bad7f0' h='100vh' display='flex' justifyContent='center' alignItems='center' bgImg={`url(${img})`} bgSize="cover" inset={'0'}>
           <Box w='550px' bg='aliceblue' borderRadius='5px' h='440px' mt='15vh'>
             <Box as='header' pos='relative' zIndex='2' h='70px' p='0 30px' bg='blue.300' borderRadius='5px 5px 0 0' display='flex' alignItems='center' justifyContent='space-between' boxShadow='0px 3px 5px 1px rgba(0,0,0,0.1)'>
               <Text fontSize='20px' fontWeight='600' className='title'>General Instructions :</Text>

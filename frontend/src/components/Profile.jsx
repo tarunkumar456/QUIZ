@@ -27,6 +27,7 @@ import { useReactToPrint } from 'react-to-print';
 import { useNavigate } from 'react-router-dom';
 import { useAlert } from 'react-alert';
 import Loader from './Loader/Loader';
+import img from '../assets/back7.jpg'
 
 function Profile() {
     const [userData, setuserdata] = useState({});
@@ -117,7 +118,8 @@ function Profile() {
         <Box minH={['150vh', '120vh']}
             width={['100vw', 'full']}
             bgColor={'#bad7f0'}
-            overflowX={'scroll'}  
+            overflowX={'scroll'}
+            bgImg={`url(${img})`} bgSize="cover" inset={'0'}  
             >
             
             {loading ? (
