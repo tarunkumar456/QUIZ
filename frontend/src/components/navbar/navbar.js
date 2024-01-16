@@ -75,7 +75,7 @@ function Header() {
         zIndex={1000}
       >
         <Image src={img1} alt={'loading'} w={['8', '16']} h={['8', '16']} />
-        <Heading fontSize={[ '4xl','6xl']} color={'blue.500'} fontFamily={'sans-serif'} >
+        <Heading fontSize={['4xl', '6xl']} color={'blue.500'} fontFamily={'sans-serif'} >
           Quiz-Time
         </Heading>
         {login && <Box style={{ marginLeft: 'auto' }} display={{ base: 'none', md: 'block', lg: 'block' }}>
@@ -99,16 +99,17 @@ function Header() {
             Logout
           </Button>
         </Box>}
-        <Box display={{ base: 'block', md: 'none', lg: 'none' }}
+        {login && <Box display={{ base: 'block', md: 'none', lg: 'none' }}
           style={{ marginLeft: 'auto' }}
-          >
+        >
           <Button
             onClick={onOpen}
             marginRight={'4vmax'}
           >
-            <GiHamburgerMenu/>
+            <GiHamburgerMenu />
           </Button>
         </Box>
+        }
       </HStack>
 
       <Drawer isOpen={isOpen} placement="right" onClose={onClose}>
@@ -130,7 +131,7 @@ function Header() {
                 Logout
               </Button>
             </DrawerBody>
-            
+
           </DrawerContent>
         </DrawerOverlay>
       </Drawer>
