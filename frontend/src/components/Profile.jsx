@@ -231,25 +231,7 @@ function Profile() {
                             </Box>
                         </Box>
                     </div>
-                    <HStack position={{ base: 'relative', md: 'relative', lg: 'fixed' }} bottom={'9vh'} left={'5vw'} mt={['4vh','0vh']}>
-                        <Button
-                            className="next_btn"
-                            height="40px"
-                            mt={'9vh'}
-                            p={'0 13px'}
-                            fontSize="18px"
-                            fontWeight="400"
-                            cursor="pointer"
-                            borderRadius="5px"
-                            bg="#007bff"
-                            border="1px solid #007bff"
-                            lineHeight="10px"
-                            _hover={{ bg: '#0263ca', cursor: 'pointer' }}
-                            onClick={gotohome}
-                            color={'white'}
-                        >
-                            Home
-                        </Button>
+                    <HStack position={{ base: 'relative', md: 'relative', lg: 'fixed' }} bottom={'9vh'} left={'7vw'} mt={['4vh','0vh']}>
                         <Button
                             className="next_btn"
                             height="40px"
