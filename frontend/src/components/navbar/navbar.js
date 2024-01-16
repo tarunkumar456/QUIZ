@@ -1,4 +1,4 @@
-import { HStack, Image, Heading, Button } from '@chakra-ui/react'
+import { HStack, Image, Heading, Button,Box } from '@chakra-ui/react'
 import { React, useState, useEffect } from 'react'
 import img1 from '../../assets/1.png'
 import axios from 'axios'
