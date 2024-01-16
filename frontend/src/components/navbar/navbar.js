@@ -28,7 +28,7 @@ function Header() {
 
   const logouthandler = async () => {
     try {
-      await axios.post(`/api/v1/logout`, {}, { withCredentials: true });
+      await axios.post(`https://quiz-backend-one-fawn.vercel.app/api/v1/logout`, {}, { withCredentials: true });
       Navigate('/login');
       setLogin(false);
     } catch (error) {
@@ -53,7 +53,7 @@ function Header() {
   useEffect(() => {
     const check = async () => {
       try {
-        await axios.get(`/api/v1/islogin`, { withCredentials: true });
+        await axios.get(`https://quiz-backend-one-fawn.vercel.app/api/v1/islogin`, { withCredentials: true });
         setLogin(true);
       } catch (error) {
         // console.log(error)
