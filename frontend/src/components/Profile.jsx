@@ -130,7 +130,7 @@ function Profile() {
                     <div ref={componentpdf} style={{ width: '100vw'}}>
                         <Box
                             display={'flex'}
-                            flexDirection={['column', 'row']}
+                            flexDirection={{ base: 'column', md: 'column', lg: 'row' }}
 
                             alignItems={'flex-start'}
                             p={2}
@@ -138,7 +138,7 @@ function Profile() {
                         >
                             <Box
                                 width={['100%', '100%', '30%']}
-                                position={['relative', 'fixed']}
+                                position={{ base: 'relative', md: 'relative', lg: 'fixed' }}
                                 top={['10vh', '20vh']}
                                 ml={[0, 0, '6vw']}
                             >
@@ -231,7 +231,7 @@ function Profile() {
                             </Box>
                         </Box>
                     </div>
-                    <HStack position={['relative', 'fixed']} bottom={'9vh'} left={'5vw'} mt={['4vh','0vh']}>
+                    <HStack position={{ base: 'relative', md: 'relative', lg: 'fixed' }} bottom={'9vh'} left={'5vw'} mt={['4vh','0vh']}>
                         <Button
                             className="next_btn"
                             height="40px"
